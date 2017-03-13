@@ -21,35 +21,16 @@
         <div class="sixteen wide column">
             <div class="ui hidden divider"></div>
             <div class="ui red center aligned raised segment">
-                <strong>WARNING:</strong> Due to increased demand for our free trial we cannot guarantee supply.<br>As of <strong><?= date('Y-m-d') ?></strong> we currently have the product <strong>IN STOCK</strong> and are ready to ship within 24 hours of purchase.
+
             </div>
-        </div>
-        <div class="ten wide center aligned column">
-            <h1 class="product-name bilextra">Bilextra</h1>
-            <span class="product-tag bilextra">Get rid of all<br>your recurring problems</span>
-            <img src="<?= $assetPath ?>images/bottles_bil.svg" class="bottles">
-            <img src="<?= $assetPath ?>images/hurry_bil.svg" class="hurry">
         </div>
         <div class="six wide column">
             <div class="ui segments">
-                <h3 class="ui inverted segment black center aligned header">
-                    GET YOUR BOTTLE NOW! ONLY $9.95
-                </h3>
                 <div class="ui segment">
-                    <?php if (isset($errors)): ?>
-                        <div class="ui error message">
-                            <strong>Please check the following errors:</strong>
-                            <ul>
-                                <?php foreach ($errors as $error): ?>
-                                    <li><?= $error ?></li>
-                                <?php endforeach ?>
-                            </ul>
-                        </div>
-                    <?php endif ?>
                     <!-- Form -->
                     <form class="ui small form" method="post">
                         <button class="fluid ui right labeled icon blue huge button">
-                            <i class="right arrow icon"></i>Buy Now
+                            <i class="right arrow icon"></i>Add extra $49
                         </button>
                     </form>
                 </div>

@@ -1,12 +1,10 @@
 <?php
 
-use App\Action\InvoiceAction;
-use App\Action\LeadAction;
+use App\Action\AccountAction;
 use App\Action\PaymentAction;
+use App\Action\UpsellAction;
 use Interop\Container\ContainerInterface;
-use Slim\Csrf\Guard;
 use Web\Component\Responder;
-use Web\Middleware\CsrfForm;
 
 // DIC configuration
 $container = $app->getContainer();
@@ -22,15 +20,8 @@ $container['logger'] = function ($c) {
     $logger = new Monolog\Logger($settings['name']);
     $logger->pushProcessor(new Monolog\Processor\UidProcessor());
     $logger->pushHandler(new Monolog\Handler\StreamHandler($settings['path'], Monolog\Logger::DEBUG));
+
     return $logger;
-};
-
-$container['csrf'] = function ($c) {
-    return new Guard();
-};
-
-$container['csrfForm'] = function (ContainerInterface $container) {
-    return new CsrfForm($container->get('csrf'));
 };
 
 $container['responder'] = function (ContainerInterface $container) {
@@ -47,14 +38,14 @@ $container['rebilly'] = function ($c) {
 };
 
 // actions:
-$container[LeadAction::class] = function ($c) {
-    return new LeadAction($c->get('responder'), $c->get('rebilly'));
-};
-
 $container[PaymentAction::class] = function ($c) {
-    return new PaymentAction($c->get('responder'), $c->get('rebilly'), $c->get('settings')['templatePath']);
+    return new PaymentAction($c->get('responder'), $c->get('rebilly'));
 };
 
-$container[InvoiceAction::class] = function ($c) {
-    return new InvoiceAction($c->get('responder'), $c->get('rebilly'));
+$container[AccountAction::class] = function ($c) {
+    return new AccountAction($c->get('responder'), $c->get('rebilly'), $c->get('settings')['baseUrl']);
+};
+
+$container[UpsellAction::class] = function ($c) {
+    return new UpsellAction($c->get('responder'), $c->get('rebilly'));
 };

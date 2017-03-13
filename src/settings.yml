@@ -6,3 +6,4 @@ settings:
     api_key: ''
     api_host: 'http://api-sandbox.dev-local.rebilly.com'
   assetPath: '/'
+  baseUrl: http://www.dev-local.upsell.com
