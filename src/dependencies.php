@@ -39,7 +39,7 @@ $container['rebilly'] = function ($c) {
 
 // actions:
 $container[PaymentAction::class] = function ($c) {
-    return new PaymentAction($c->get('responder'), $c->get('rebilly'));
+    return new PaymentAction($c->get('responder'), $c->get('rebilly'), $c->get('settings')['baseUrl']);
 };
 
 $container[AccountAction::class] = function ($c) {

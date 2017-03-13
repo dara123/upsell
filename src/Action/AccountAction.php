@@ -2,8 +2,8 @@
 
 namespace App\Action;
 
+use Exception;
 use Rebilly\Client;
-use Rebilly\Entities\PaymentInstruments\PayPalInstrument;
 use Rebilly\Entities\PaymentMethod;
 use Rebilly\Entities\PaymentMethodInstrument;
 use Rebilly\Http\Exception\UnprocessableEntityException;
@@ -59,6 +59,7 @@ class AccountAction
                 $activation = [
                     'websiteId' => 'web',
                     'currency' => 'USD',
+                    'amount' => 9.95,
                     'redirectURLs' => [
                         'success' => $this->baseUrl . '/payment/' . $customer->getId(),
                         'decline' => $this->baseUrl . '/decline',
@@ -82,10 +83,9 @@ class AccountAction
                 }
             } catch (UnprocessableEntityException $e) {
                 return $e->getErrors();
-            } catch (\Exception $e) {
+            } catch (Exception $e) {
                 return $e->getMessage();
             }
-
         }
 
         $template = 'index.phtml';
