@@ -1,0 +1,9 @@
+settings:
+  logger:
+    name: app
+    path: '../logs/app.log'
+  rebilly_api:
+    api_key: ''
+    api_host: 'http://api-sandbox.dev-local.rebilly.com'
+  assetPath: '/'
+  baseUrl: http://www.dev-local.upsell.com

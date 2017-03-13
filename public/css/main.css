@@ -1,0 +1,177 @@
+/*
+* # NutraDemo Ver 1.0
+* Copyright 2013 - 2015 Rebilly SRL
+*/
+
+/*******************************
+             Main
+*******************************/
+p {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.main {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ccd6ec+100 */
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #ffffff 0%, #ccd6ec 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  #ffffff 0%,#ccd6ec 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  #ffffff 0%,#ccd6ec 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ccd6ec',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    padding-bottom: 50px;
+}
+
+.main.bilextra {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e8eaea+100 */
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #ffffff 0%, #e8eaea 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  #ffffff 0%,#e8eaea 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  #ffffff 0%,#e8eaea 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e8eaea',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    padding-bottom: 50px;
+}
+
+.product-name {
+    font-weight: 600;
+    color: #0033a0;
+    font-size: 82px;
+    font-kerning: auto;
+    text-shadow: 0 4px 0 rgba(0,51,160,0.2);
+    letter-spacing: -1px;
+    margin-top: 20px!important;
+}
+
+.product-name.bilextra {
+    color: #263238;
+    text-shadow: 0 4px 0 rgba(38,50,56,0.20);
+}
+
+.product-tag {
+    display: inline-block;
+    margin: 10px 0 100px 0;
+    font-size: 22px;
+    font-family: Montserrat, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    line-height: 22px;
+    color: #0033a0;
+    padding: 20px 40px 22px 40px;
+    background-color: #FFFFFF;
+    border: 4px solid #0033a0;
+    -webkit-box-shadow: 0 6px 0 0 rgba(0,51,160,0.2);
+    -moz-box-shadow: 0 6px 0 0 rgba(0,51,160,0.2);
+    box-shadow: 0 6px 0 0 rgba(0,51,160,0.2);
+}
+
+.product-tag.bilextra {
+    color: #263238;
+    border-color: #263238;
+    -webkit-box-shadow: 0 6px 0 0 rgba(38,50,56,0.20);
+    -moz-box-shadow: 0 6px 0 0 rgba(38,50,56,0.20);
+    box-shadow: 0 6px 0 0 rgba(38,50,56,0.20);
+}
+
+.bottles { width: 500px; }
+
+.bottles.small {
+    width: 80%;
+    margin-top: 26px;
+}
+
+.bottles.news {
+    margin: 50px auto;
+    width: 300px!important;
+}
+
+.hurry {
+    width: 150px;
+    position: absolute;
+    left: 510px;
+    top: 330px;
+}
+
+.why { padding: 40px 0; }
+
+.billing {
+    margin-bottom: 18px;
+    display: none;
+}
+
+.cvv {
+    color: #0033a0!important;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.credit-card {
+    display: block;
+    top: -77px;
+    right: 0;
+    z-index: 999;
+    padding-top: 14px;
+    width: 170px;
+    height: 100px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background: rgba(0, 51, 160, .25);
+    text-align: center;
+}
+
+.cc-cvv2 {
+    position: absolute;
+    top: 48px;
+    right: 7px;
+    z-index: 99;
+    width: 34px;
+    height: 34px;
+    border: 2px solid #e53935;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #e53935;
+    text-align: center;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 30px;
+}
+
+.cc-mb {
+    width: 100%;
+    height: 24px;
+    background: #2c3e50;
+}
+
+.cc-signature {
+    margin: 4px auto;
+    width: 162px;
+    height: 20px;
+    background: #ffffff;
+}
+
+.cc-pan-holder {
+    -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+    -moz-transform: matrix(-1, 0, 0, 1, 0, 0);
+    -ms-transform: matrix(-1, 0, 0, 1, 0, 0);
+    -o-transform: matrix(-1, 0, 0, 1, 0, 0);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.cc-pan {
+    margin: 0;
+    padding: 0;
+    color: #0033a0;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 11px;
+}
+
+.thanks-text {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/*-------------------
+        Form
+--------------------*/
