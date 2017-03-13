@@ -1,0 +1,32 @@
+{
+    "name": "rebilly/upsell",
+    "description": "A demo for PayPal 1 click upsell",
+    "keywords": ["microframework","rest","router", "psr7"],
+    "homepage": "https://www.disputynol.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adam Altman",
+            "email": "adam@rebilly.com",
+            "homepage": "https://www.rebilly.com/"
+        }
+    ],
+    "autoload": {
+        "classmap": [
+            "src/Action/",
+            "src/Web/Middleware/",
+            "src/Web/Component/"
+        ]
+    },
+    "require": {
+        "php": ">=5.5.0",
+        "slim/slim": "~3.0",
+        "slim/php-view": "^2.0",
+        "monolog/monolog": "^1.17",
+        "rebilly/client-php": "dev-master@dev",
+        "slim/csrf": "^0.5.0",
+        "fzaninotto/faker": "^1.5",
+        "symfony/yaml": "^3.0",
+        "aura/payload": "^3.0"
+    }
+}
